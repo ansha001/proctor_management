@@ -8,12 +8,12 @@
         <img src="{% static 'info_tab.png' %}"></img>
     </div>
     <div class="col padding wrap">
-        <h3>Welcome to Proctor Management</h3>
+        <h3 class="caption">Welcome to Proctor Management</h3>
         <p class="subcaption">Please login or signin to continue.</p>
         <div class="list-style">
             <ul>
-                <li class="student"><a href="#">Student Sign In</a></li>
-                <li class="faculty"><a href="#">Faculty Sign In</a></li>
+                <li class="student"><a href="{% url 'student-signin' %}">Student Sign In</a></li>
+                <li class="faculty"><a href="{% url 'faculty-signin' %}">Faculty Sign In</a></li>
             </ul>
         </div>
     </div>

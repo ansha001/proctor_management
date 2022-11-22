@@ -36,6 +36,10 @@ body{
     margin-right: 3%;
     border-radius: 10px;
 }
+.caption {
+    font-family: 'Sono', sans-serif;
+    font-weight: bolder;
+}
 .student:hover{
     background-color: #1B62BF;
     color: white;
