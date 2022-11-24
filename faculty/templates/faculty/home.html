@@ -3,10 +3,10 @@
     <h2>this is faculty home</h2>
     {% if user.is_authenticated %}
     <button><a href="{% url 'faculty-profile' %}">Profile</a></button>
+    <button><a href="{% url 'password_reset' %}">Forgot Password</a></button>
     <button><a href="{% url 'faculty-logout' %}">Logout</a></button>
     {% else %}
         <button><a href="{% url 'faculty-login' %}">Log In</a></button>
         <button><a href="{% url 'faculty-register' %}">Register</a></button>
-        <button><a href="{% url 'password_reset' %}">Forgot Password</a></button>
     {% endif %}
 {% endblock content %}

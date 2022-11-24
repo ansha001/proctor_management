@@ -7,5 +7,5 @@ class FacultyRegistrationForm(UserCreationForm):
     email = forms.EmailField()
 
     class Meta:
-        model = User
+        model = Proctor
         fields = ['username','email', 'password1', 'password2']
