@@ -5,6 +5,9 @@
 .subcaption{
     color: rgb(137, 135, 135);
 }
+.center{
+    background-color: #c0daf1 !important;
+}
 body{
     overflow-x: hidden;
 }

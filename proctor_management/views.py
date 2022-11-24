@@ -8,3 +8,6 @@ def faculty_sigin(request):
 
 def student_sigin(request):
     return render(request, "student_signin.html")
+
+def password_reset_done(request):
+    return render(request, "password_reset_done.html")
