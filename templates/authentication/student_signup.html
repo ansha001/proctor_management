@@ -1,0 +1,45 @@
+{% extends 'authentication/base.html' %} 
+{% block title %} SignUp {% endblock title %}
+{% block body %} 
+
+        <div class="vh-100 d-flex justify-content-center align-items-center ">
+            <div class="col-md-5 p-5 shadow-sm border rounded-5 border-danger bg-white">
+                <h2 class="text-center mb-4 text-danger">Sign Up </h2>
+                {% include 'authentication/messages.html'%}
+
+                <form method ="post" action={% url 'student_signup' %}>
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="exampleInputName1" class="form-label">Name</label>
+                        <input name="name" type="text" class="form-control border border-danger" placeholder="Name" id="exampleInputName1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input name="email" type="email" class="form-control border border-danger" placeholder="Email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputUsn1" class="form-label">USN</label>
+                        <input name="usn" type="text" class="form-control border border-danger" placeholder="USN" id="exampleInputUsn1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input name="password" type="password" class="form-control border border-danger" placeholder="Passward" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+                        <input name="confirm_password" type="password" class="form-control border border-danger" placeholder="Confirm Passward" id="exampleInputPassword2">
+                    </div>
+                    <div class="d-grid">
+                        <button class="btn btn-danger" type="submit">Register</button>
+                    </div>
+                </form>
+                <div class="mt-3">
+                    <p class="mb-0  text-center">Already have an account? <a href={% url 'student_signin' %}
+                            class="text-danger fw-bold">Sign
+                            In</a></p>
+                </div>
+            </div>
+        </div>
+
+ {% endblock body %}
+
