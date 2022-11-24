@@ -1,0 +1,9 @@
+{% extends "faculty/base.html" %}
+{% block content %}
+    <h1>Faculty Login</h1>
+    <form action="" method="POST">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
+    <small>Need an account?<a href="{% url 'faculty-register' %}">Sign Up</a></small>
+{% endblock content %}
