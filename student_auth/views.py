@@ -44,7 +44,7 @@ def student_signup(request):
 
         if password != confirm_password:
             messages.add_message(request, messages.ERROR,'Password mismatch')
-            return render(request, 'authentication/student_signin.html',  status=409)
+            return render(request, 'student_signin.html',  status=409)
 
         if User.objects.filter(email=email).exists():
             messages.add_message(request, messages.ERROR,'You are already Registered,SignIn!')
@@ -58,7 +58,7 @@ def student_signup(request):
         messages.add_message(request, messages.SUCCESS, 'We sent you an email to verify your account')
         return redirect(reverse('student_signin'))
 
-    return render(request, 'authentication/student_signup.html')
+    return render(request, 'student_signup.html')
 
 def student_signin(request):
     if request.method == "POST":
@@ -69,16 +69,16 @@ def student_signin(request):
 
         if user and not user.is_email_verified:
             messages.add_message(request,messages.ERROR,"Student Email Not Verified! Check your Inbox ")
-            return render(request, 'authentication/student_signin.html',  status=409)
+            return render(request, 'student_signin.html',  status=409)
                 
         if not user:
             messages.add_message(request,messages.ERROR,"Invalid credentials, try again")
-            return render(request, 'authentication/student_signin.html',  status=409)
+            return render(request, 'student_signin.html',  status=409)
         messages.add_message(request, messages.SUCCESS,'Welcome {}'.format(user.name))
         login(request,user)
         # here edit
         return redirect(reverse('student_signin'))
-    return render(request, 'authentication/student_signin.html')
+    return render(request, 'student_signin.html')
 
 
 def signout(request):

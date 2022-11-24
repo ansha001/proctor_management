@@ -118,7 +118,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR/ 'static']
 
 
 STATICFILES_DIRS = (
@@ -141,7 +140,7 @@ AUTH_USER_MODEL = "student_auth.User"
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = "jaishankar.cs20@bmsce.ac.in"
-EMAIL_HOST_PASSWORD = "bmsce.ac.in"
+EMAIL_HOST_USER = "dummymail2408@gmail.com"
+EMAIL_HOST_PASSWORD = "ewbw yyup iybg dsuf"
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
